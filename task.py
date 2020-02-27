@@ -4,4 +4,3 @@ def firstrun():
 
 def calcArea(r):
     return r * 3.14 * r
-
