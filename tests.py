@@ -20,6 +20,18 @@ class TestCase(unittest.TestCase):
         expected = 3.14
         self.assertEqual(expected, task.calcArea(1))
 
+    def test5(self):
+        expected = ["red, blue"]
+        self.assertEqual(expected, task.listEnds(["red", "green", "blue"]))
+
+    def test5(self):
+        expected = ["red, red"]
+        self.assertEqual(expected, task.listEnds(["red"]))
+
+    def test5(self):
+        expected = ["red, green"]
+        self.assertNotEqual(expected, task.listEnds(["red", "green", "blue"]))
+
 
 if __name__ == '__main__':
     unittest.main()
