@@ -21,15 +21,15 @@ class TestCase(unittest.TestCase):
         self.assertEqual(expected, task.calcArea(1))
 
     def test5(self):
-        expected = ["red, blue"]
+        expected = ["red", "blue"]
         self.assertEqual(expected, task.listEnds(["red", "green", "blue"]))
 
     def test6(self):
-        expected = ["red, red"]
+        expected = ["red", "red"]
         self.assertEqual(expected, task.listEnds(["red"]))
 
     def test7(self):
-        expected = ["red, green"]
+        expected = ["red", "green"]
         self.assertNotEqual(expected, task.listEnds(["red", "green", "blue"]))
 
 
