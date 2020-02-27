@@ -1,5 +1,6 @@
 import unittest
 import task
+from datetime import date
 
 
 class TestCase(unittest.TestCase):
@@ -31,6 +32,18 @@ class TestCase(unittest.TestCase):
     def test7(self):
         expected = ["red", "green"]
         self.assertNotEqual(expected, task.listEnds(["red", "green", "blue"]))
+
+    def test8(self):
+        expected = 10
+        bday = date(2020, 12, 10)
+        afterday = date(2020, 12, 20)
+        self.assertEqual(expected, task.diffDates(bday, afterday))
+
+    def test9(self):
+        expected = 4
+        bday = date(2020, 3, 30)
+        afterday = date(2020, 4, 3)
+        self.assertEqual(expected, task.diffDates(bday, afterday))
 
 
 if __name__ == '__main__':
